@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Take Review",
+  "type": "object",
+  "required": [
+    "run_id",
+    "clip_id",
+    "verdict",
+    "repair_variable",
+    "verdict_rationale",
+    "continuity_deviations"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "clip_id": {
+      "type": "string"
+    },
+    "verdict": {
+      "enum": [
+        "accept",
+        "retake_one_variable",
+        "retake_reset",
+        "reject_reset_idea"
+      ]
+    },
+    "repair_variable": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "verdict_rationale": {
+      "type": "string"
+    },
+    "continuity_deviations": {
+      "type": "array"
+    }
+  }
+}

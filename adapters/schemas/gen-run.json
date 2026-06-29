@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Generation Run",
+  "type": "object",
+  "required": [
+    "run_id",
+    "clip_id",
+    "prompt_version",
+    "generation_mode",
+    "surface_endpoint",
+    "reference_list",
+    "user_prompt",
+    "generated_duration_sec",
+    "seed",
+    "status"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "clip_id": {
+      "type": "string"
+    },
+    "prompt_version": {
+      "type": "string"
+    },
+    "generation_mode": {
+      "type": "string"
+    },
+    "surface_endpoint": {
+      "type": "string"
+    },
+    "reference_list": {
+      "type": "array"
+    },
+    "user_prompt": {
+      "type": "string"
+    },
+    "generated_duration_sec": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "seed": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "running",
+        "completed",
+        "failed",
+        "rejected"
+      ]
+    }
+  }
+}
